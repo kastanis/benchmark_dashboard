@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Benchmark Dashboard for Data Journalism</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Personal research tracker</p>
+        <h1>AI Benchmarks for Data Journalism</h1>
+      </div>
+      <div class="header-stats" aria-label="Dashboard summary">
+        <div>
+          <span id="benchmarkCount">0</span>
+          <small>benchmarks</small>
+        </div>
+        <div>
+          <span id="updatedDate">-</span>
+          <small>updated</small>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="control-band" aria-label="Filters">
+        <label class="search">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="tables, factuality, pandas...">
+        </label>
+        <label>
+          <span>Category</span>
+          <select id="categoryFilter">
+            <option value="all">All categories</option>
+          </select>
+        </label>
+        <label>
+          <span>Minimum relevance</span>
+          <input id="relevanceFilter" type="range" min="1" max="5" value="1">
+          <output id="relevanceValue">1+</output>
+        </label>
+      </section>
+
+      <section class="overview-grid" aria-label="Overview">
+        <div class="panel">
+          <h2>Capability Map</h2>
+          <div id="capabilityBars" class="bars"></div>
+        </div>
+        <div class="panel">
+          <h2>Priority View</h2>
+          <div id="priorityList" class="priority-list"></div>
+        </div>
+      </section>
+
+      <section class="leaderboard-section" aria-label="Model leaderboard">
+        <div class="section-heading">
+          <div>
+            <h2>Model Leaderboard</h2>
+            <p>Reported scores for GPT, Claude, Gemini, and related systems.</p>
+          </div>
+          <div class="leaderboard-filters">
+            <label>
+              <span>Benchmark</span>
+              <select id="scoreBenchmarkFilter">
+                <option value="all">All benchmarks</option>
+              </select>
+            </label>
+            <label>
+              <span>Provider</span>
+              <select id="scoreProviderFilter">
+                <option value="all">All providers</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="leaderboard-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Benchmark</th>
+                <th>Provider</th>
+                <th>Model</th>
+                <th>Score</th>
+                <th>Metric</th>
+                <th>Source</th>
+                <th>Note</th>
+              </tr>
+            </thead>
+            <tbody id="scoreRows"></tbody>
+          </table>
+        </div>
+        <p id="scoreNotes" class="fine-print"></p>
+      </section>
+
+      <section class="trend-section" aria-label="TableBench trend chart">
+        <div class="section-heading">
+          <div>
+            <h2>TableBench Trend (Data Analysis)</h2>
+            <p>Historical TableBench overall scores from the official leaderboard, grouped by inferred provider.</p>
+          </div>
+        </div>
+        <div class="trend-panel">
+          <div class="trend-chart-wrap">
+            <svg id="trendChart" class="trend-chart" role="img" aria-label="TableBench overall scores over time"></svg>
+            <div id="trendTooltip" class="trend-tooltip" hidden></div>
+          </div>
+          <div>
+            <h3>What This Shows</h3>
+            <p id="trendSummary"></p>
+            <div id="trendLegend" class="trend-legend"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="recommendations-section" aria-label="Recommended benchmark watchlist">
+        <div class="section-heading">
+          <div>
+            <h2>Recommended Watchlist</h2>
+            <p>Benchmarks grouped around the capabilities you care about.</p>
+          </div>
+        </div>
+        <div id="recommendationGroups" class="recommendation-grid"></div>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <h2>Benchmark Notes</h2>
+          <p id="resultCount">Showing 0 entries</p>
+        </div>
+        <div id="benchmarks" class="benchmark-grid"></div>
+      </section>
+    </main>
+
+    <template id="benchmarkTemplate">
+      <article class="benchmark-card">
+        <div class="card-topline">
+          <span class="category"></span>
+          <span class="year"></span>
+        </div>
+        <h3></h3>
+        <p class="why"></p>
+        <div class="meta-row">
+          <span class="status"></span>
+          <span class="difficulty"></span>
+          <span class="score"></span>
+        </div>
+        <div class="tags"></div>
+        <ul class="signals"></ul>
+        <a class="source" target="_blank" rel="noreferrer">Source</a>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

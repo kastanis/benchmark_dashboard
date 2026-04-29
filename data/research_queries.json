@@ -1,0 +1,35 @@
+{
+  "starter_queries": [
+    "site:arxiv.org AI benchmark data journalism LLM",
+    "latest LLM benchmark table question answering data analysis",
+    "LLM benchmark web research agent source verification",
+    "AI benchmark chart reasoning journalism",
+    "LLM benchmark data science code pandas matplotlib",
+    "benchmark document extraction long context QA tables"
+  ],
+  "capability_watchlist": [
+    "general reasoning",
+    "source discovery",
+    "fact verification",
+    "spreadsheet reasoning",
+    "chart interpretation",
+    "document extraction",
+    "key information extraction",
+    "entity extraction",
+    "document classification",
+    "data analysis code",
+    "software engineering agents",
+    "text-to-SQL",
+    "geospatial reasoning",
+    "statistical critique",
+    "FOIA/document dump triage"
+  ],
+  "recommended_benchmark_buckets": [
+    "reasoning/general intelligence",
+    "code and data work",
+    "data/analytical reasoning",
+    "truthfulness/hallucinations",
+    "unstructured to structured extraction",
+    "tool use/agents"
+  ]
+}

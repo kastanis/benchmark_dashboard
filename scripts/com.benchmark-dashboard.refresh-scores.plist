@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.benchmark-dashboard.refresh-scores</string>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/akastanis/Git_work/benchmark_dashboard</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/akastanis/Git_work/benchmark_dashboard/scripts/research_agent.py</string>
+    <string>refresh-scores</string>
+  </array>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key>
+    <integer>1</integer>
+    <key>Hour</key>
+    <integer>9</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/akastanis/Git_work/benchmark_dashboard/research_inbox/refresh.out.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/akastanis/Git_work/benchmark_dashboard/research_inbox/refresh.err.log</string>
+</dict>
+</plist>
+

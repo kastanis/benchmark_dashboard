@@ -1,0 +1,167 @@
+{
+  "updated": "2026-04-29",
+  "groups": [
+    {
+      "id": "reasoning-general-intelligence",
+      "name": "Reasoning / General Intelligence",
+      "question": "Can it think through problems across domains?",
+      "recommended": [
+        {
+          "name": "MMLU",
+          "status": "Added",
+          "why": "Broad academic and professional knowledge across many subjects."
+        },
+        {
+          "name": "GPQA",
+          "status": "Watchlist",
+          "why": "Graduate-level science questions that are hard for non-experts."
+        },
+        {
+          "name": "BIG-Bench Hard",
+          "status": "Watchlist",
+          "why": "A suite of challenging reasoning tasks selected from BIG-Bench."
+        },
+        {
+          "name": "ARC-AGI",
+          "status": "Watchlist",
+          "why": "Abstract pattern reasoning with less reliance on memorized text."
+        }
+      ]
+    },
+    {
+      "id": "code-data-work",
+      "name": "Code And Data Work",
+      "question": "Can it debug, write analysis code, and work in notebooks?",
+      "recommended": [
+        {
+          "name": "SWE-bench / SWE-bench Verified",
+          "status": "Added",
+          "why": "Real GitHub issue resolution; useful for tracking agentic coding."
+        },
+        {
+          "name": "DS-1000",
+          "status": "Already tracked",
+          "why": "Python data science code across pandas, NumPy, matplotlib, sklearn, and more."
+        },
+        {
+          "name": "HumanEval+ / MBPP+",
+          "status": "Watchlist",
+          "why": "Cleaner code-generation signal, though less newsroom-like."
+        },
+        {
+          "name": "BIRD",
+          "status": "Added",
+          "why": "Text-to-SQL over realistic databases."
+        }
+      ]
+    },
+    {
+      "id": "data-analytical-reasoning",
+      "name": "Data / Analytical Reasoning",
+      "question": "Can it reason over structured data, tables, charts, and calculations?",
+      "recommended": [
+        {
+          "name": "TableBench",
+          "status": "Already tracked",
+          "why": "Direct table QA, data analysis, numerical reasoning, and visualization."
+        },
+        {
+          "name": "TAT-QA",
+          "status": "Already tracked",
+          "why": "Questions over financial tables plus surrounding text."
+        },
+        {
+          "name": "ChartQA",
+          "status": "Already tracked",
+          "why": "Chart interpretation and visual reasoning."
+        },
+        {
+          "name": "FinQA",
+          "status": "Watchlist",
+          "why": "Financial numerical reasoning with executable programs."
+        }
+      ]
+    },
+    {
+      "id": "truthfulness-hallucinations",
+      "name": "Truthfulness / Hallucinations",
+      "question": "Does it make things up, repeat myths, or know when not to answer?",
+      "recommended": [
+        {
+          "name": "TruthfulQA",
+          "status": "Added",
+          "why": "Targets common misconceptions and imitative falsehoods."
+        },
+        {
+          "name": "SimpleQA",
+          "status": "Already tracked",
+          "why": "Short factual questions with single verifiable answers."
+        },
+        {
+          "name": "FEVER",
+          "status": "Added",
+          "why": "Claim verification against evidence from Wikipedia."
+        },
+        {
+          "name": "HaluEval",
+          "status": "Watchlist",
+          "why": "Hallucination detection across QA, dialogue, and summarization."
+        }
+      ]
+    },
+    {
+      "id": "unstructured-structured-extraction",
+      "name": "Unstructured \u2192 Structured Extraction",
+      "question": "Can it pull entities, categories, fields, and relationships out of messy documents?",
+      "recommended": [
+        {
+          "name": "DocIE",
+          "status": "Added",
+          "why": "Document-level entity, mention, type, and relation extraction from long unstructured text."
+        },
+        {
+          "name": "IDP Leaderboard",
+          "status": "Added",
+          "why": "Key information extraction, OCR, document classification, long-document processing, and table extraction."
+        },
+        {
+          "name": "FUNSD / CORD / SROIE",
+          "status": "Watchlist",
+          "why": "Older form, receipt, and key-value extraction benchmarks for semi-structured documents."
+        },
+        {
+          "name": "DocVQA / InfographicVQA",
+          "status": "Watchlist",
+          "why": "Question answering over visually structured documents."
+        }
+      ]
+    },
+    {
+      "id": "tool-use-agents",
+      "name": "Tool Use / Agents",
+      "question": "Can it complete multi-step workflows with tools and external information?",
+      "recommended": [
+        {
+          "name": "GAIA",
+          "status": "Already tracked",
+          "why": "Real-world tasks requiring browsing, tools, planning, and multimodal reasoning."
+        },
+        {
+          "name": "BrowseComp",
+          "status": "Already tracked",
+          "why": "Persistent web research for hard-to-find but verifiable answers."
+        },
+        {
+          "name": "WebArena",
+          "status": "Watchlist",
+          "why": "Agents operating websites to complete realistic tasks."
+        },
+        {
+          "name": "OSWorld",
+          "status": "Watchlist",
+          "why": "Computer-use agents completing tasks in desktop environments."
+        }
+      ]
+    }
+  ]
+}

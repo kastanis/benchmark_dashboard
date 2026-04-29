@@ -1,0 +1,676 @@
+{
+  "updated": "2026-04-29",
+  "metric": "TableBench Overall score",
+  "notes": [
+    "Rows are parsed from the official TableBench leaderboard.",
+    "Provider is inferred from model name; inspect rows before citing provider-level claims.",
+    "Multiple rows for one provider may represent different models or prompting methods, not one continuous model lineage."
+  ],
+  "history": [
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Mistral",
+      "model": "Mistral-7B-Instruct",
+      "method": "SCoT",
+      "reported_date": "2023-09-27",
+      "scores": {
+        "fact_checking": 36.46,
+        "numerical_reasoning": 4.53,
+        "data_analysis": 12.89,
+        "visualization": 0.0,
+        "overall": 10.97
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Mistral",
+      "model": "Mixtral-8x7B-Instruct",
+      "method": "PoT",
+      "reported_date": "2023-12-11",
+      "scores": {
+        "fact_checking": 31.25,
+        "numerical_reasoning": 30.48,
+        "data_analysis": 12.01,
+        "visualization": 6.0,
+        "overall": 21.7
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "OpenAI",
+      "model": "GPT-3.5-Turbo",
+      "method": "PoT",
+      "reported_date": "2024-01-25",
+      "scores": {
+        "fact_checking": 58.33,
+        "numerical_reasoning": 47.86,
+        "data_analysis": 24.19,
+        "visualization": 38.0,
+        "overall": 37.15
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "OpenAI",
+      "model": "GPT-4-Turbo",
+      "method": "TCoT",
+      "reported_date": "2024-04-09",
+      "scores": {
+        "fact_checking": 86.46,
+        "numerical_reasoning": 66.25,
+        "data_analysis": 32.07,
+        "visualization": 62.0,
+        "overall": 51.5
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Meta",
+      "model": "Llama3-70B-Chat",
+      "method": "TCoT",
+      "reported_date": "2024-04-13",
+      "scores": {
+        "fact_checking": 70.83,
+        "numerical_reasoning": 43.58,
+        "data_analysis": 29.66,
+        "visualization": 4.0,
+        "overall": 38.68
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Meta",
+      "model": "Llama3-8B-Chat",
+      "method": "SCoT",
+      "reported_date": "2024-04-13",
+      "scores": {
+        "fact_checking": 65.62,
+        "numerical_reasoning": 14.61,
+        "data_analysis": 22.06,
+        "visualization": 0.0,
+        "overall": 22.2
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "OpenAI",
+      "model": "GPT-4o",
+      "method": "TCoT",
+      "reported_date": "2024-05-13",
+      "scores": {
+        "fact_checking": 81.25,
+        "numerical_reasoning": 68.51,
+        "data_analysis": 32.09,
+        "visualization": 56.0,
+        "overall": 51.96
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Meta",
+      "model": "Llama-3.1-405B-Instruct",
+      "method": "TCoT",
+      "reported_date": "2024-07-23",
+      "scores": {
+        "fact_checking": 78.12,
+        "numerical_reasoning": 64.99,
+        "data_analysis": 29.11,
+        "visualization": 32.0,
+        "overall": 48.87
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Meta",
+      "model": "Llama3.1-70B-Instruct",
+      "method": "TCoT",
+      "reported_date": "2024-07-23",
+      "scores": {
+        "fact_checking": 70.83,
+        "numerical_reasoning": 53.15,
+        "data_analysis": 24.66,
+        "visualization": 26.0,
+        "overall": 41.05
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Meta",
+      "model": "Llama3.1-8B-Instruct",
+      "method": "DP",
+      "reported_date": "2024-07-23",
+      "scores": {
+        "fact_checking": 54.17,
+        "numerical_reasoning": 7.3,
+        "data_analysis": 16.2,
+        "visualization": 2.0,
+        "overall": 15.42
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Alibaba",
+      "model": "TableLLM-CodeQwen-7B",
+      "method": "TCoT",
+      "reported_date": "2024-08-13",
+      "scores": {
+        "fact_checking": 57.29,
+        "numerical_reasoning": 22.17,
+        "data_analysis": 22.34,
+        "visualization": 36.0,
+        "overall": 24.81
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Alibaba",
+      "model": "TableLLM-Qwen2-7B",
+      "method": "TCoT",
+      "reported_date": "2024-08-13",
+      "scores": {
+        "fact_checking": 60.42,
+        "numerical_reasoning": 36.52,
+        "data_analysis": 23.19,
+        "visualization": 24.0,
+        "overall": 31.9
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "DeepSeek",
+      "model": "TableLLM-DeepseekCoder-7B",
+      "method": "TCoT",
+      "reported_date": "2024-08-13",
+      "scores": {
+        "fact_checking": 63.54,
+        "numerical_reasoning": 34.26,
+        "data_analysis": 21.33,
+        "visualization": 36.0,
+        "overall": 30.51
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Meta",
+      "model": "TableLLM-Llama3-8B",
+      "method": "TCoT",
+      "reported_date": "2024-08-13",
+      "scores": {
+        "fact_checking": 64.58,
+        "numerical_reasoning": 30.48,
+        "data_analysis": 23.57,
+        "visualization": 26.0,
+        "overall": 29.8
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Meta",
+      "model": "TableLLM-Llama3.1-8B",
+      "method": "TCoT",
+      "reported_date": "2024-08-13",
+      "scores": {
+        "fact_checking": 69.79,
+        "numerical_reasoning": 30.73,
+        "data_analysis": 24.34,
+        "visualization": 24.0,
+        "overall": 30.77
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Alibaba",
+      "model": "Qwen2.5-72B-Instruct",
+      "method": "TCoT",
+      "reported_date": "2024-09-19",
+      "scores": {
+        "fact_checking": 80.21,
+        "numerical_reasoning": 64.48,
+        "data_analysis": 28.89,
+        "visualization": 34.0,
+        "overall": 48.79
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Alibaba",
+      "model": "Qwen2.5-7B-Instruct",
+      "method": "TCoT",
+      "reported_date": "2024-09-19",
+      "scores": {
+        "fact_checking": 60.42,
+        "numerical_reasoning": 16.88,
+        "data_analysis": 20.73,
+        "visualization": 6.0,
+        "overall": 22.14
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "OpenAI",
+      "model": "TableGPT2-7B",
+      "method": "TCoT",
+      "reported_date": "2024-11-04",
+      "scores": {
+        "fact_checking": 75.0,
+        "numerical_reasoning": 51.39,
+        "data_analysis": 25.53,
+        "visualization": 28.0,
+        "overall": 41.05
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Alibaba",
+      "model": "Qwen2.5-Coder-32B-Instruct",
+      "method": "TCoT",
+      "reported_date": "2024-11-12",
+      "scores": {
+        "fact_checking": 84.38,
+        "numerical_reasoning": 57.68,
+        "data_analysis": 27.14,
+        "visualization": 32.0,
+        "overall": 45.51
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Alibaba",
+      "model": "Qwen2.5-Coder-7B-Instruct",
+      "method": "TCoT",
+      "reported_date": "2024-11-12",
+      "scores": {
+        "fact_checking": 71.88,
+        "numerical_reasoning": 40.05,
+        "data_analysis": 24.23,
+        "visualization": 6.0,
+        "overall": 35.12
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "DeepSeek",
+      "model": "Deepseek-R1",
+      "method": "DP",
+      "reported_date": "2025-01-20",
+      "scores": {
+        "fact_checking": 82.29,
+        "numerical_reasoning": 75.51,
+        "data_analysis": 35.06,
+        "visualization": 20.0,
+        "overall": 56.31
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "OpenAI",
+      "model": "o3-mini",
+      "method": "DP",
+      "reported_date": "2025-01-31",
+      "scores": {
+        "fact_checking": 86.46,
+        "numerical_reasoning": 82.07,
+        "data_analysis": 35.56,
+        "visualization": 32.0,
+        "overall": 59.9
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Other",
+      "model": "QWQ-32B",
+      "method": "DP",
+      "reported_date": "2025-03-06",
+      "scores": {
+        "fact_checking": 81.25,
+        "numerical_reasoning": 59.7,
+        "data_analysis": 21.45,
+        "visualization": 12.0,
+        "overall": 43.87
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "DeepSeek",
+      "model": "Deepseek-Chat-V3",
+      "method": "TCoT",
+      "reported_date": "2025-03-25",
+      "scores": {
+        "fact_checking": 82.29,
+        "numerical_reasoning": 69.27,
+        "data_analysis": 27.32,
+        "visualization": 48.0,
+        "overall": 50.56
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Meta",
+      "model": "Llama-4-Maverick-17B-128E-Instruct",
+      "method": "TCoT",
+      "reported_date": "2025-04-05",
+      "scores": {
+        "fact_checking": 80.21,
+        "numerical_reasoning": 73.3,
+        "data_analysis": 28.84,
+        "visualization": 54.0,
+        "overall": 52.73
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Meta",
+      "model": "Llama-4-Scout-17B-16E-Instruct",
+      "method": "TCoT",
+      "reported_date": "2025-04-05",
+      "scores": {
+        "fact_checking": 81.25,
+        "numerical_reasoning": 64.23,
+        "data_analysis": 23.07,
+        "visualization": 30.0,
+        "overall": 46.53
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "OpenAI",
+      "model": "o4-mini",
+      "method": "DP",
+      "reported_date": "2025-04-16",
+      "scores": {
+        "fact_checking": 83.33,
+        "numerical_reasoning": 80.35,
+        "data_analysis": 40.5,
+        "visualization": 50.0,
+        "overall": 60.75
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "OpenAI",
+      "model": "o4-mini-high",
+      "method": "DP",
+      "reported_date": "2025-04-16",
+      "scores": {
+        "fact_checking": 82.29,
+        "numerical_reasoning": 81.11,
+        "data_analysis": 42.3,
+        "visualization": 54.0,
+        "overall": 61.69
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Alibaba",
+      "model": "Qwen3-32B",
+      "method": null,
+      "reported_date": "2025-04-29",
+      "scores": {
+        "fact_checking": 83.33,
+        "numerical_reasoning": 72.54,
+        "data_analysis": 28.16,
+        "visualization": 18.0,
+        "overall": 52.45
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Anthropic",
+      "model": "Claude4-Sonnet",
+      "method": "DP",
+      "reported_date": "2025-05-22",
+      "scores": {
+        "fact_checking": 81.25,
+        "numerical_reasoning": 75.57,
+        "data_analysis": 31.14,
+        "visualization": 54.0,
+        "overall": 54.75
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Google",
+      "model": "Gemini-2.5-Pro",
+      "method": "DP",
+      "reported_date": "2025-06-17",
+      "scores": {
+        "fact_checking": 84.38,
+        "numerical_reasoning": 79.6,
+        "data_analysis": 31.86,
+        "visualization": 66.0,
+        "overall": 57.18
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "xAI",
+      "model": "Grok4",
+      "method": "DP",
+      "reported_date": "2025-07-09",
+      "scores": {
+        "fact_checking": 83.33,
+        "numerical_reasoning": 73.8,
+        "data_analysis": 40.54,
+        "visualization": 16.0,
+        "overall": 57.8
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "OpenAI",
+      "model": "GPT-5",
+      "method": "DP",
+      "reported_date": "2025-08-07",
+      "scores": {
+        "fact_checking": 83.33,
+        "numerical_reasoning": 82.37,
+        "data_analysis": 36.04,
+        "visualization": 58.0,
+        "overall": 59.94
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Other",
+      "model": "RankAgent",
+      "method": null,
+      "reported_date": "2025-10-14",
+      "scores": {
+        "fact_checking": 87.5,
+        "numerical_reasoning": 78.34,
+        "data_analysis": 45.3,
+        "visualization": 50.0,
+        "overall": 62.14
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Distyl AI",
+      "model": "ButtonAgent",
+      "method": null,
+      "reported_date": "2026-03-25",
+      "scores": {
+        "fact_checking": 89.58,
+        "numerical_reasoning": 81.86,
+        "data_analysis": 45.76,
+        "visualization": 70.0,
+        "overall": 64.14
+      },
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      }
+    }
+  ]
+}

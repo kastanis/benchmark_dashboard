@@ -1,0 +1,68 @@
+{
+  "updated": "2026-04-29",
+  "sources": [
+    {
+      "id": "tablebench",
+      "name": "TableBench leaderboard",
+      "url": "https://tablebench.github.io/",
+      "source_type": "official",
+      "metric": "DP score",
+      "targets": [
+        {"benchmark_id": "tablebench", "benchmark": "TableBench", "provider": "OpenAI", "model": "GPT-5", "aliases": ["GPT-5"]},
+        {"benchmark_id": "tablebench", "benchmark": "TableBench", "provider": "Google", "model": "Gemini-2.5-Pro", "aliases": ["Gemini-2.5-Pro", "Gemini 2.5 Pro"]},
+        {"benchmark_id": "tablebench", "benchmark": "TableBench", "provider": "Anthropic", "model": "Claude4-Sonnet", "aliases": ["Claude4-Sonnet", "Claude 4 Sonnet"]}
+      ]
+    },
+    {
+      "id": "gaia-pricepertoken",
+      "name": "PricePerToken GAIA leaderboard",
+      "url": "https://pricepertoken.com/leaderboards/benchmark/gaia",
+      "source_type": "third_party",
+      "metric": "accuracy %",
+      "targets": [
+        {"benchmark_id": "gaia", "benchmark": "GAIA", "provider": "OpenAI", "model": "GPT-5 Mini", "aliases": ["GPT-5 Mini"]},
+        {"benchmark_id": "gaia", "benchmark": "GAIA", "provider": "Anthropic", "model": "Claude 3.7 Sonnet", "aliases": ["Claude 3.7 Sonnet", "Claude 3.7 Sonnet Thinking"]},
+        {"benchmark_id": "gaia", "benchmark": "GAIA", "provider": "Google", "model": "Gemini 2.5 Pro", "aliases": ["Gemini 2.5 Pro"]}
+      ]
+    },
+    {
+      "id": "simpleqa-pricepertoken",
+      "name": "PricePerToken SimpleQA leaderboard",
+      "url": "https://pricepertoken.com/leaderboards/benchmark/simpleqa",
+      "source_type": "third_party",
+      "metric": "accuracy %",
+      "targets": [
+        {"benchmark_id": "simpleqa", "benchmark": "SimpleQA", "provider": "Google", "model": "Gemini 2.5 Pro", "aliases": ["Gemini 2.5 Pro"]},
+        {"benchmark_id": "simpleqa", "benchmark": "SimpleQA", "provider": "OpenAI", "model": "GPT-4.1", "aliases": ["GPT-4.1"]},
+        {"benchmark_id": "simpleqa", "benchmark": "SimpleQA", "provider": "Anthropic", "model": "Claude 3.7 Sonnet", "aliases": ["Claude 3.7 Sonnet", "Claude 3.7 Sonnet Thinking"]}
+      ]
+    },
+    {
+      "id": "swe-bench-verified",
+      "name": "SWE-bench Verified leaderboard",
+      "url": "https://www.swebench.com/verified.html",
+      "source_type": "official",
+      "metric": "resolved %",
+      "targets": [
+        {"benchmark_id": "swe-bench", "benchmark": "SWE-bench Verified", "provider": "OpenAI", "model": "GPT family", "aliases": ["GPT", "OpenAI"]},
+        {"benchmark_id": "swe-bench", "benchmark": "SWE-bench Verified", "provider": "Anthropic", "model": "Claude family", "aliases": ["Claude", "Anthropic"]},
+        {"benchmark_id": "swe-bench", "benchmark": "SWE-bench Verified", "provider": "Google", "model": "Gemini family", "aliases": ["Gemini", "Google"]}
+      ]
+    },
+    {
+      "id": "idp-kie",
+      "name": "Nanonets IDP KIE benchmark page",
+      "url": "https://benchmarks.nanonets.com/",
+      "source_type": "third_party",
+      "metric": "KIE avg",
+      "score_index": 1,
+      "min_score": 50,
+      "targets": [
+        {"benchmark_id": "idp-leaderboard", "benchmark": "IDP Key Information Extraction", "provider": "Google", "model": "gemini-2.5-pro-preview-03-25 (reasoning: low)", "aliases": ["gemini-2.5-pro-preview-03-25"]},
+        {"benchmark_id": "idp-leaderboard", "benchmark": "IDP Key Information Extraction", "provider": "Anthropic", "model": "claude-3.7-sonnet (reasoning:low)", "aliases": ["claude-3.7-sonnet"]},
+        {"benchmark_id": "idp-leaderboard", "benchmark": "IDP Key Information Extraction", "provider": "OpenAI", "model": "gpt-4.1-2025-04-14", "aliases": ["gpt-4.1-2025-04-14"]},
+        {"benchmark_id": "idp-leaderboard", "benchmark": "IDP Key Information Extraction", "provider": "OpenAI", "model": "gpt-4o-2024-08-06", "aliases": ["gpt-4o-2024-08-06"]}
+      ]
+    }
+  ]
+}

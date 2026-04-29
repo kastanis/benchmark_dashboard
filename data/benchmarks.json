@@ -1,0 +1,305 @@
+{
+  "updated": "2026-04-29",
+  "benchmarks": [
+    {
+      "id": "browsecomp",
+      "name": "BrowseComp",
+      "category": "Web research",
+      "status": "Active",
+      "year": 2025,
+      "journalism_relevance": 5,
+      "difficulty": "Very hard",
+      "capabilities": ["web search", "source discovery", "multi-hop research", "persistence"],
+      "why_it_matters": "Closest proxy here for whether an AI system can dig through the open web to find obscure but verifiable facts.",
+      "task_shape": "Short-answer questions where the answer is hard to find but easy to verify.",
+      "signals": [
+        "Good fit for backgrounding, source discovery, and hard-to-find fact retrieval.",
+        "Not a direct test of source evaluation, narrative synthesis, or interview judgment."
+      ],
+      "source": {
+        "label": "OpenAI, BrowseComp announcement",
+        "url": "https://openai.com/index/browsecomp/"
+      }
+    },
+    {
+      "id": "gaia",
+      "name": "GAIA",
+      "category": "Agentic research",
+      "status": "Active",
+      "year": 2024,
+      "journalism_relevance": 5,
+      "difficulty": "Hard",
+      "capabilities": ["tool use", "web browsing", "multimodal reasoning", "planning"],
+      "why_it_matters": "A useful benchmark for whether assistants can complete real-world research tasks that require tools and multiple steps.",
+      "task_shape": "466 real-world questions with short, unambiguous answers.",
+      "signals": [
+        "Strong signal for agent reliability across mixed research tasks.",
+        "Answers are short, so it does not measure explanatory writing or editorial framing."
+      ],
+      "source": {
+        "label": "ICLR 2024 GAIA paper",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/25ae35b5b1738d80f1f03a8713e405ec-Abstract-Conference.html"
+      }
+    },
+    {
+      "id": "simpleqa",
+      "name": "SimpleQA",
+      "category": "Factuality",
+      "status": "Active",
+      "year": 2024,
+      "journalism_relevance": 4,
+      "difficulty": "Medium",
+      "capabilities": ["factual accuracy", "calibration", "hallucination resistance"],
+      "why_it_matters": "A quick signal for whether a model knows when it can answer concise fact questions without inventing.",
+      "task_shape": "4,326 short fact-seeking questions with single verifiable answers.",
+      "signals": [
+        "Useful for tracking hallucination risk on factual prompts.",
+        "Too narrow for long-form fact checks or reporting memos with many claims."
+      ],
+      "source": {
+        "label": "OpenAI, SimpleQA announcement",
+        "url": "https://openai.com/index/introducing-simpleqa/"
+      }
+    },
+    {
+      "id": "truthfulqa",
+      "name": "TruthfulQA",
+      "category": "Truthfulness",
+      "status": "Established",
+      "year": 2021,
+      "journalism_relevance": 5,
+      "difficulty": "Medium",
+      "capabilities": ["truthfulness", "hallucination resistance", "misconception handling", "calibration"],
+      "why_it_matters": "A strong signal for whether a model repeats common falsehoods instead of giving grounded answers.",
+      "task_shape": "817 questions across 38 categories designed to elicit imitative falsehoods and popular misconceptions.",
+      "signals": [
+        "Highly relevant to source-sensitive reporting, especially health, law, finance, and politics.",
+        "Older benchmark; modern models may be trained against it, so use it alongside newer factuality tests."
+      ],
+      "source": {
+        "label": "OpenAI, TruthfulQA announcement",
+        "url": "https://openai.com/index/truthfulqa/"
+      }
+    },
+    {
+      "id": "fever",
+      "name": "FEVER",
+      "category": "Fact checking",
+      "status": "Established",
+      "year": 2018,
+      "journalism_relevance": 5,
+      "difficulty": "Medium",
+      "capabilities": ["claim verification", "evidence retrieval", "natural language inference", "Wikipedia evidence"],
+      "why_it_matters": "A foundational benchmark for whether systems can support or refute claims using explicit textual evidence.",
+      "task_shape": "185k human-generated claims labeled as supported, refuted, or not enough information, with evidence sentences for supported/refuted claims.",
+      "signals": [
+        "Strong conceptual fit for fact-checking workflows that require evidence, not just an answer.",
+        "Evidence is Wikipedia-based, so it does not capture the messiness of primary documents, local records, or reporting notes."
+      ],
+      "source": {
+        "label": "FEVER dataset card",
+        "url": "https://huggingface.co/datasets/fever/fever"
+      }
+    },
+    {
+      "id": "mmlu",
+      "name": "MMLU",
+      "category": "Reasoning",
+      "status": "Established",
+      "year": 2021,
+      "journalism_relevance": 3,
+      "difficulty": "Medium",
+      "capabilities": ["general knowledge", "multitask reasoning", "professional domains", "multiple choice"],
+      "why_it_matters": "A broad general-capability signal for whether a model has baseline knowledge across domains reporters often touch.",
+      "task_shape": "Multiple-choice questions across 57 academic and professional subjects.",
+      "signals": [
+        "Useful as a broad sanity check for general knowledge and problem solving.",
+        "Less close to newsroom work because it is multiple-choice and often saturated by frontier models."
+      ],
+      "source": {
+        "label": "ICLR 2021 MMLU paper",
+        "url": "https://openreview.net/forum?id=d7KBjmI3GmQ"
+      }
+    },
+    {
+      "id": "tablebench",
+      "name": "TableBench",
+      "category": "Tables",
+      "status": "Active",
+      "year": 2024,
+      "journalism_relevance": 5,
+      "difficulty": "Hard",
+      "capabilities": ["table QA", "numerical reasoning", "data analysis", "visualization"],
+      "why_it_matters": "Directly overlaps with common reporting work: ask questions of tables, compare numbers, and reason from structured data.",
+      "task_shape": "886 curated test cases across fact checking, numerical reasoning, data analysis, and visualization.",
+      "signals": [
+        "High relevance to spreadsheets, agency data, and published tables.",
+        "Small enough that individual task coverage matters; inspect examples before over-weighting scores."
+      ],
+      "source": {
+        "label": "TableBench project page",
+        "url": "https://tablebench.github.io/"
+      }
+    },
+    {
+      "id": "bird-sql",
+      "name": "BIRD-SQL",
+      "category": "Databases",
+      "status": "Active",
+      "year": 2023,
+      "journalism_relevance": 5,
+      "difficulty": "Hard",
+      "capabilities": ["text-to-SQL", "database querying", "structured data", "external knowledge"],
+      "why_it_matters": "A practical signal for whether models can turn plain-English questions into SQL over realistic, messy databases.",
+      "task_shape": "12,751 question-SQL pairs over 95 large databases totaling 33.4 GB across 37 professional domains.",
+      "signals": [
+        "Highly relevant to querying public records, enterprise databases, and structured investigative datasets.",
+        "Scores can depend on schema linking, retrieval, and hand-provided domain evidence, so raw model comparisons need context."
+      ],
+      "source": {
+        "label": "BIRD benchmark site",
+        "url": "https://bird-bench.github.io/"
+      }
+    },
+    {
+      "id": "docie",
+      "name": "DocIE",
+      "category": "Document extraction",
+      "status": "Active",
+      "year": 2025,
+      "journalism_relevance": 5,
+      "difficulty": "Very hard",
+      "capabilities": ["entity extraction", "relation extraction", "long documents", "document-level information extraction"],
+      "why_it_matters": "A close fit for turning large unstructured document dumps into entities, mentions, types, and relationships.",
+      "task_shape": "Systems process long unstructured documents and output entity mention clusters, entity types, and relation triples.",
+      "signals": [
+        "Strong match for document-dump triage, entity lists, relationship mapping, and building structured leads from text.",
+        "The benchmark is newer and challenging; baseline scores are low, so treat it as a frontier capability signal rather than a mature production benchmark."
+      ],
+      "source": {
+        "label": "XLLM ACL 2025 DocIE shared task",
+        "url": "https://xllms.github.io/DocIE/"
+      }
+    },
+    {
+      "id": "idp-leaderboard",
+      "name": "IDP Leaderboard",
+      "category": "Document extraction",
+      "status": "Active",
+      "year": 2025,
+      "journalism_relevance": 5,
+      "difficulty": "Hard",
+      "capabilities": ["key information extraction", "document classification", "OCR", "long documents", "table extraction"],
+      "why_it_matters": "A practical benchmark family for extracting fields, classifying documents, reading long files, and handling visually structured PDFs.",
+      "task_shape": "A unified leaderboard across intelligent document processing tasks including KIE, OCR, VQA, document classification, long-document processing, table extraction, and confidence scoring.",
+      "signals": [
+        "Very relevant to PDFs, scanned records, forms, filings, contracts, invoices, and large document sets.",
+        "It mixes several document-processing tasks, so compare rows within the same IDP sub-benchmark rather than across all IDP tasks."
+      ],
+      "source": {
+        "label": "IDP Leaderboard",
+        "url": "https://idp-leaderboard.org/key-extraction-benchmark"
+      }
+    },
+    {
+      "id": "chartqa",
+      "name": "ChartQA",
+      "category": "Charts",
+      "status": "Established",
+      "year": 2022,
+      "journalism_relevance": 4,
+      "difficulty": "Medium",
+      "capabilities": ["chart understanding", "visual reasoning", "arithmetic", "question answering"],
+      "why_it_matters": "Tests whether vision-language models can answer questions about charts rather than only describe them.",
+      "task_shape": "Human-written and generated questions over charts, emphasizing visual and logical reasoning.",
+      "signals": [
+        "Useful for auditing chart interpretation in multimodal models.",
+        "Chart screenshots are cleaner than many real newsroom source documents."
+      ],
+      "source": {
+        "label": "ChartQA paper page",
+        "url": "https://huggingface.co/papers/2203.10244"
+      }
+    },
+    {
+      "id": "tatqa",
+      "name": "TAT-QA",
+      "category": "Financial tables",
+      "status": "Established",
+      "year": 2021,
+      "journalism_relevance": 4,
+      "difficulty": "Hard",
+      "capabilities": ["table-text QA", "financial reports", "numerical reasoning", "evidence extraction"],
+      "why_it_matters": "Good proxy for annual reports, budgets, filings, and other reporting materials where tables and prose must be read together.",
+      "task_shape": "16,552 questions over 2,757 hybrid table-text contexts from financial reports.",
+      "signals": [
+        "Strong match for financial and accountability reporting workflows.",
+        "Domain is finance-heavy, so it may miss messier civic-data formats."
+      ],
+      "source": {
+        "label": "TAT-QA GitHub repository",
+        "url": "https://github.com/NExTplusplus/TAT-QA"
+      }
+    },
+    {
+      "id": "tabfact",
+      "name": "TabFact",
+      "category": "Fact checking",
+      "status": "Established",
+      "year": 2020,
+      "journalism_relevance": 4,
+      "difficulty": "Medium",
+      "capabilities": ["claim verification", "table reasoning", "structured evidence", "logic"],
+      "why_it_matters": "A direct fit for checking whether a claim is supported or contradicted by structured data.",
+      "task_shape": "118k human-annotated statements using 16k Wikipedia tables as evidence.",
+      "signals": [
+        "Useful lens for table-backed fact checks.",
+        "Binary entail/refute labels simplify the messier reality of journalistic evidence."
+      ],
+      "source": {
+        "label": "TabFact project page",
+        "url": "https://tabfact.github.io/index.html"
+      }
+    },
+    {
+      "id": "ds1000",
+      "name": "DS-1000",
+      "category": "Analysis code",
+      "status": "Established",
+      "year": 2023,
+      "journalism_relevance": 5,
+      "difficulty": "Medium",
+      "capabilities": ["pandas", "numpy", "matplotlib", "data science code", "debugging"],
+      "why_it_matters": "A practical benchmark for whether models can help write and repair everyday Python analysis code.",
+      "task_shape": "1,000 data science coding problems spanning seven Python libraries.",
+      "signals": [
+        "Strong overlap with computational reporting notebooks.",
+        "Does not evaluate data cleaning judgment, provenance, or statistical interpretation."
+      ],
+      "source": {
+        "label": "DS-1000 project page",
+        "url": "https://ds1000-code-gen.github.io/"
+      }
+    },
+    {
+      "id": "swe-bench",
+      "name": "SWE-bench",
+      "category": "Code and data work",
+      "status": "Active",
+      "year": 2023,
+      "journalism_relevance": 4,
+      "difficulty": "Hard",
+      "capabilities": ["software engineering", "debugging", "agentic coding", "repository repair"],
+      "why_it_matters": "A useful signal for whether AI coding agents can debug real projects rather than only write short snippets.",
+      "task_shape": "Real GitHub issues where a model must generate a patch that resolves the described problem.",
+      "signals": [
+        "Strong proxy for maintaining data pipelines, scrapers, parsers, and newsroom analysis tools.",
+        "Not specific to pandas or R, and scores can depend heavily on the agent scaffold around the model."
+      ],
+      "source": {
+        "label": "SWE-bench overview",
+        "url": "https://www.swebench.com/SWE-bench/"
+      }
+    }
+  ]
+}

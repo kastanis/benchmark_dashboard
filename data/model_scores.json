@@ -1,0 +1,362 @@
+{
+  "updated": "2026-04-29",
+  "notes": [
+    "Scores are directional snapshots, not a universal ranking of model quality.",
+    "Rows marked third_party should be checked against the linked source before citing externally.",
+    "Some benchmarks evaluate systems or agents, not only base models."
+  ],
+  "scores": [
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "OpenAI",
+      "model": "GPT-5",
+      "score": 59.94,
+      "metric": "DP score",
+      "higher_is_better": true,
+      "reported_date": "2025-08-07",
+      "source_type": "official",
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      },
+      "note": "Official TableBench leaderboard row."
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Google",
+      "model": "Gemini-2.5-Pro",
+      "score": 57.18,
+      "metric": "DP score",
+      "higher_is_better": true,
+      "reported_date": "2025-06-17",
+      "source_type": "official",
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      },
+      "note": "Official TableBench leaderboard row."
+    },
+    {
+      "benchmark_id": "tablebench",
+      "benchmark": "TableBench",
+      "provider": "Anthropic",
+      "model": "Claude4-Sonnet",
+      "score": 54.75,
+      "metric": "DP score",
+      "higher_is_better": true,
+      "reported_date": "2025-05-22",
+      "source_type": "official",
+      "source": {
+        "label": "TableBench leaderboard",
+        "url": "https://tablebench.github.io/"
+      },
+      "note": "Official TableBench leaderboard row."
+    },
+    {
+      "benchmark_id": "gaia",
+      "benchmark": "GAIA",
+      "provider": "OpenAI",
+      "model": "GPT-5 Mini",
+      "score": 44.8,
+      "metric": "accuracy %",
+      "higher_is_better": true,
+      "reported_date": "2026-04-15",
+      "source_type": "third_party",
+      "source": {
+        "label": "PricePerToken GAIA leaderboard",
+        "url": "https://pricepertoken.com/leaderboards/benchmark/gaia"
+      },
+      "note": "Aggregator row; use as a watchlist signal."
+    },
+    {
+      "benchmark_id": "gaia",
+      "benchmark": "GAIA",
+      "provider": "Anthropic",
+      "model": "Claude 3.7 Sonnet",
+      "score": 43.9,
+      "metric": "accuracy %",
+      "higher_is_better": true,
+      "reported_date": "2026-04-15",
+      "source_type": "third_party",
+      "source": {
+        "label": "PricePerToken GAIA leaderboard",
+        "url": "https://pricepertoken.com/leaderboards/benchmark/gaia"
+      },
+      "note": "Aggregator row; use as a watchlist signal."
+    },
+    {
+      "benchmark_id": "gaia",
+      "benchmark": "GAIA",
+      "provider": "Google",
+      "model": "Gemini 2.5 Pro",
+      "score": 33.3,
+      "metric": "accuracy %",
+      "higher_is_better": true,
+      "reported_date": "2026-04-15",
+      "source_type": "third_party",
+      "source": {
+        "label": "PricePerToken GAIA leaderboard",
+        "url": "https://pricepertoken.com/leaderboards/benchmark/gaia"
+      },
+      "note": "Aggregator row; use as a watchlist signal."
+    },
+    {
+      "benchmark_id": "simpleqa",
+      "benchmark": "SimpleQA",
+      "provider": "Google",
+      "model": "Gemini 2.5 Pro",
+      "score": 53.0,
+      "metric": "accuracy %",
+      "higher_is_better": true,
+      "reported_date": "2026-03-14",
+      "source_type": "third_party",
+      "source": {
+        "label": "PricePerToken SimpleQA leaderboard",
+        "url": "https://pricepertoken.com/leaderboards/benchmark/simpleqa"
+      },
+      "note": "Aggregator row; useful for factuality watchlist."
+    },
+    {
+      "benchmark_id": "simpleqa",
+      "benchmark": "SimpleQA",
+      "provider": "OpenAI",
+      "model": "GPT-4.1",
+      "score": 40.4,
+      "metric": "accuracy %",
+      "higher_is_better": true,
+      "reported_date": "2026-03-14",
+      "source_type": "third_party",
+      "source": {
+        "label": "PricePerToken SimpleQA leaderboard",
+        "url": "https://pricepertoken.com/leaderboards/benchmark/simpleqa"
+      },
+      "note": "Aggregator row; useful for factuality watchlist."
+    },
+    {
+      "benchmark_id": "simpleqa",
+      "benchmark": "SimpleQA",
+      "provider": "Anthropic",
+      "model": "Claude 3.7 Sonnet",
+      "score": 32.8,
+      "metric": "accuracy %",
+      "higher_is_better": true,
+      "reported_date": "2026-03-14",
+      "source_type": "third_party",
+      "source": {
+        "label": "PricePerToken SimpleQA leaderboard",
+        "url": "https://pricepertoken.com/leaderboards/benchmark/simpleqa"
+      },
+      "note": "Aggregator row; useful for factuality watchlist."
+    },
+    {
+      "benchmark_id": "browsecomp",
+      "benchmark": "BrowseComp",
+      "provider": "OpenAI",
+      "model": "Deep Research",
+      "score": 51.5,
+      "metric": "accuracy %",
+      "higher_is_better": true,
+      "reported_date": "2025-04-10",
+      "source_type": "official",
+      "source": {
+        "label": "OpenAI BrowseComp announcement",
+        "url": "https://openai.com/index/browsecomp/"
+      },
+      "note": "Agent model trained for persistent web browsing; not directly comparable to base chat models."
+    },
+    {
+      "benchmark_id": "browsecomp",
+      "benchmark": "BrowseComp",
+      "provider": "OpenAI",
+      "model": "o1",
+      "score": 9.9,
+      "metric": "accuracy %",
+      "higher_is_better": true,
+      "reported_date": "2025-04-10",
+      "source_type": "official",
+      "source": {
+        "label": "OpenAI BrowseComp announcement",
+        "url": "https://openai.com/index/browsecomp/"
+      },
+      "note": "OpenAI-reported baseline."
+    },
+    {
+      "benchmark_id": "browsecomp",
+      "benchmark": "BrowseComp",
+      "provider": "OpenAI",
+      "model": "GPT-4o with browsing",
+      "score": 1.9,
+      "metric": "accuracy %",
+      "higher_is_better": true,
+      "reported_date": "2025-04-10",
+      "source_type": "official",
+      "source": {
+        "label": "OpenAI BrowseComp announcement",
+        "url": "https://openai.com/index/browsecomp/"
+      },
+      "note": "OpenAI-reported baseline."
+    },
+    {
+      "benchmark_id": "swe-bench",
+      "benchmark": "SWE-bench Verified",
+      "provider": "Anthropic",
+      "model": "Claude Opus 4.6",
+      "score": 83.7,
+      "metric": "resolve rate %",
+      "higher_is_better": true,
+      "reported_date": "2026-04-23",
+      "source_type": "third_party",
+      "source": {
+        "label": "LMMarketCap SWE-bench Verified leaderboard",
+        "url": "https://lmmarketcap.com/benchmarks/swe_bench_verified"
+      },
+      "note": "Aggregator row for SWE-bench Verified; check against official SWE-bench before external citation."
+    },
+    {
+      "benchmark_id": "swe-bench",
+      "benchmark": "SWE-bench Verified",
+      "provider": "OpenAI",
+      "model": "GPT-5.4",
+      "score": 80.0,
+      "metric": "resolve rate %",
+      "higher_is_better": true,
+      "reported_date": "2026-04-23",
+      "source_type": "third_party",
+      "source": {
+        "label": "LMMarketCap SWE-bench Verified leaderboard",
+        "url": "https://lmmarketcap.com/benchmarks/swe_bench_verified"
+      },
+      "note": "Aggregator row for SWE-bench Verified; check against official SWE-bench before external citation."
+    },
+    {
+      "benchmark_id": "swe-bench",
+      "benchmark": "SWE-bench Verified",
+      "provider": "Google",
+      "model": "Gemini 3 Flash",
+      "score": 78.0,
+      "metric": "resolve rate %",
+      "higher_is_better": true,
+      "reported_date": "2026-04-23",
+      "source_type": "third_party",
+      "source": {
+        "label": "LMMarketCap SWE-bench Verified leaderboard",
+        "url": "https://lmmarketcap.com/benchmarks/swe_bench_verified"
+      },
+      "note": "Aggregator row for SWE-bench Verified; check against official SWE-bench before external citation."
+    },
+    {
+      "benchmark_id": "bird-sql",
+      "benchmark": "BIRD-SQL",
+      "provider": "Ant Group",
+      "model": "Agentar-Scale-SQL",
+      "score": 77.0,
+      "metric": "R-VES",
+      "higher_is_better": true,
+      "reported_date": "2025-09-25",
+      "source_type": "official",
+      "source": {
+        "label": "BIRD-SQL leaderboard",
+        "url": "https://bird-bench.github.io/"
+      },
+      "note": "Official BIRD reward-based valid efficiency score; this is a system/agent row, not a base model row."
+    },
+    {
+      "benchmark_id": "bird-sql",
+      "benchmark": "BIRD-SQL",
+      "provider": "AT&T CDO - DSAIR",
+      "model": "AskData + GPT-4o",
+      "score": 76.31,
+      "metric": "R-VES",
+      "higher_is_better": true,
+      "reported_date": "2025-12-16",
+      "source_type": "official",
+      "source": {
+        "label": "BIRD-SQL leaderboard",
+        "url": "https://bird-bench.github.io/"
+      },
+      "note": "Official BIRD reward-based valid efficiency score; this is a system using GPT-4o, not a standalone GPT-4o score."
+    },
+    {
+      "benchmark_id": "bird-sql",
+      "benchmark": "BIRD-SQL",
+      "provider": "LongShine AI Research",
+      "model": "LongData-SQL",
+      "score": 71.89,
+      "metric": "R-VES",
+      "higher_is_better": true,
+      "reported_date": "2025-07-14",
+      "source_type": "official",
+      "source": {
+        "label": "BIRD-SQL leaderboard",
+        "url": "https://bird-bench.github.io/"
+      },
+      "note": "Official BIRD reward-based valid efficiency score; this is a system/agent row, not a base model row."
+    },
+    {
+      "benchmark_id": "idp-leaderboard",
+      "benchmark": "IDP Key Information Extraction",
+      "provider": "Google",
+      "model": "gemini-2.5-pro-preview-03-25 (reasoning: low)",
+      "score": 79.66,
+      "metric": "KIE avg",
+      "higher_is_better": true,
+      "reported_date": "2026-04-29",
+      "source_type": "third_party",
+      "source": {
+        "label": "Nanonets IDP KIE benchmark page",
+        "url": "https://benchmarks.nanonets.com/"
+      },
+      "note": "IDP Key Information Extraction average mirrored on Nanonets' benchmark page; useful for field/entity extraction from documents."
+    },
+    {
+      "benchmark_id": "idp-leaderboard",
+      "benchmark": "IDP Key Information Extraction",
+      "provider": "Anthropic",
+      "model": "claude-3.7-sonnet (reasoning:low)",
+      "score": 76.09,
+      "metric": "KIE avg",
+      "higher_is_better": true,
+      "reported_date": "2026-04-29",
+      "source_type": "third_party",
+      "source": {
+        "label": "Nanonets IDP KIE benchmark page",
+        "url": "https://benchmarks.nanonets.com/"
+      },
+      "note": "IDP Key Information Extraction average mirrored on Nanonets' benchmark page; useful for field/entity extraction from documents."
+    },
+    {
+      "benchmark_id": "idp-leaderboard",
+      "benchmark": "IDP Key Information Extraction",
+      "provider": "OpenAI",
+      "model": "gpt-4.1-2025-04-14",
+      "score": 72.68,
+      "metric": "KIE avg",
+      "higher_is_better": true,
+      "reported_date": "2026-04-29",
+      "source_type": "third_party",
+      "source": {
+        "label": "Nanonets IDP KIE benchmark page",
+        "url": "https://benchmarks.nanonets.com/"
+      },
+      "note": "IDP Key Information Extraction average mirrored on Nanonets' benchmark page; useful for field/entity extraction from documents."
+    },
+    {
+      "benchmark_id": "idp-leaderboard",
+      "benchmark": "IDP Key Information Extraction",
+      "provider": "OpenAI",
+      "model": "gpt-4o-2024-08-06",
+      "score": 71.83,
+      "metric": "KIE avg",
+      "higher_is_better": true,
+      "reported_date": "2026-04-29",
+      "source_type": "third_party",
+      "source": {
+        "label": "Nanonets IDP KIE benchmark page",
+        "url": "https://benchmarks.nanonets.com/"
+      },
+      "note": "IDP Key Information Extraction average mirrored on Nanonets' benchmark page; useful for field/entity extraction from documents."
+    }
+  ]
+}
