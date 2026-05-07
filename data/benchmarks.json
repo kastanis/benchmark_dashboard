@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-29",
+  "updated": "2026-05-07",
   "benchmarks": [
     {
       "id": "browsecomp",
@@ -279,6 +279,26 @@
       "source": {
         "label": "DS-1000 project page",
         "url": "https://ds1000-code-gen.github.io/"
+      }
+    },
+    {
+      "id": "da-code",
+      "name": "DA-Code",
+      "category": "Analysis code",
+      "status": "Active",
+      "year": 2024,
+      "journalism_relevance": 5,
+      "difficulty": "Hard",
+      "capabilities": ["agentic data analysis", "data wrangling", "exploratory analysis", "python", "sql"],
+      "why_it_matters": "A close proxy for whether an AI system can autonomously explore real datasets, write analysis code, and derive answers from messy data.",
+      "task_shape": "500 complex real-world data analysis tasks across data wrangling, exploratory analysis, and machine learning in an executable environment.",
+      "signals": [
+        "Stronger fit than short coding tests for notebook-style reporting workflows that require planning, iteration, and data inspection.",
+        "Still evaluates task completion in a benchmark harness, so it does not fully capture editorial judgment, source provenance, or whether the analysis question was the right one."
+      ],
+      "source": {
+        "label": "DA-Code project page",
+        "url": "https://da-code-bench.github.io/"
       }
     },
     {

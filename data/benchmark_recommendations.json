@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-29",
+  "updated": "2026-05-07",
   "groups": [
     {
       "id": "reasoning-general-intelligence",
@@ -42,6 +42,11 @@
           "name": "DS-1000",
           "status": "Already tracked",
           "why": "Python data science code across pandas, NumPy, matplotlib, sklearn, and more."
+        },
+        {
+          "name": "DA-Code",
+          "status": "Already tracked",
+          "why": "Agentic data-analysis tasks using real datasets, executable code, and multi-step planning."
         },
         {
           "name": "HumanEval+ / MBPP+",
