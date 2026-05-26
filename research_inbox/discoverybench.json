@@ -1,0 +1,25 @@
+{
+  "id": "discoverybench",
+  "name": "DiscoveryBench",
+  "category": "Analysis code",
+  "status": "Active",
+  "year": 2024,
+  "journalism_relevance": 5,
+  "difficulty": "Hard",
+  "capabilities": [
+    "data-driven discovery",
+    "hypothesis generation",
+    "multi-step analysis",
+    "tabular reasoning"
+  ],
+  "why_it_matters": "Tests whether models can autonomously surface meaningful findings from real datasets, which mirrors the core data journalism task of finding the story in the numbers.",
+  "task_shape": "Given a dataset and a high-level research goal, the model must perform multi-step analysis to produce a verifiable hypothesis or finding that matches a ground-truth discovery.",
+  "signals": [
+    "Uses 264 real-world tasks across domains like sociology, economics, and biology drawn from published research, so findings reflect genuine analytical workflows.",
+    "Frontier models score well below human performance, and the benchmark assumes a clear research goal is provided rather than fully open-ended exploration."
+  ],
+  "source": {
+    "label": "DiscoveryBench paper (arXiv)",
+    "url": "https://arxiv.org/abs/2407.01725"
+  }
+}

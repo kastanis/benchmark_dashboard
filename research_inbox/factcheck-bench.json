@@ -1,0 +1,24 @@
+{
+  "id": "factcheck-bench",
+  "name": "FactCheck-Bench",
+  "category": "Factuality",
+  "status": "Active",
+  "year": 2024,
+  "journalism_relevance": 5,
+  "difficulty": "Hard",
+  "capabilities": [
+    "claim decomposition",
+    "evidence retrieval",
+    "source verification"
+  ],
+  "why_it_matters": "Newsrooms increasingly need automated assistance to verify statistics and quoted claims against authoritative sources before publication.",
+  "task_shape": "Given a claim from an LLM response, models must decompose it into atomic checkworthy units, retrieve supporting evidence from the web, and label each as supported, contradicted, or unverifiable.",
+  "signals": [
+    "Provides a fine-grained pipeline with human-annotated labels across decomposition, retrieval, and verification stages.",
+    "Evidence is drawn from open web search rather than curated authoritative databases, so it does not isolate government-source verification specifically."
+  ],
+  "source": {
+    "label": "FactCheck-Bench GitHub (Wang et al., 2024)",
+    "url": "https://github.com/yuxiaw/Factcheck-GPT"
+  }
+}
