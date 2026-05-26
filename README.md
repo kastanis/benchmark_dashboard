@@ -32,10 +32,11 @@ Add a structured finding from notes:
 python3 scripts/research_agent.py add research_inbox/example.json
 ```
 
-Run optional AI research mode with OpenAI's Responses API and web search:
+Run optional AI research mode using Claude:
 
 ```bash
-export OPENAI_API_KEY=...
+# Add your key to .env (see .env.example) or export it:
+export ANTHROPIC_API_KEY=...
 python3 scripts/research_agent.py research "benchmark or capability to investigate"
 ```
 

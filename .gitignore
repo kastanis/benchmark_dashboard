@@ -1,4 +1,5 @@
 .DS_Store
+how_to_make_agent_work.md
 .env
 .venv/
 __pycache__/
