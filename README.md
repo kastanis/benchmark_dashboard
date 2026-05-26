@@ -7,7 +7,7 @@ A small personal dashboard for tracking AI benchmarks that matter for data journ
 This is a dependency-free static app:
 
 ```bash
-cd /Users/akastanis/Git_work/benchmark_dashboard
+cd benchmark_dashboard
 python3 -m http.server 8765
 ```
 

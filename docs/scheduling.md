@@ -3,7 +3,7 @@
 The refresh workflow is review-first:
 
 ```bash
-cd /Users/akastanis/Git_work/benchmark_dashboard
+cd benchmark_dashboard
 python3 scripts/research_agent.py refresh-scores
 ```
 
@@ -42,7 +42,7 @@ Treat `no_matches` as a prompt to inspect the source manually or improve `data/s
 For a simpler weekly cron entry:
 
 ```cron
-0 9 * * 1 cd /Users/akastanis/Git_work/benchmark_dashboard && /usr/bin/python3 scripts/research_agent.py refresh-scores >> research_inbox/refresh.log 2>&1
+0 9 * * 1 cd benchmark_dashboard && /usr/bin/python3 scripts/research_agent.py refresh-scores >> research_inbox/refresh.log 2>&1
 ```
 
 ## GitHub Actions
