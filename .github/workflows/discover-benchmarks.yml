@@ -26,10 +26,10 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           topics=(
-            "new NLP or text analysis benchmarks 2026"
-            "document extraction or IDP benchmarks 2026"
-            "fact checking or hallucination detection benchmarks 2026"
-            "agentic or tool-use benchmarks for data tasks 2026"
+            "benchmarks that test whether AI can identify the news story or key finding in a messy dataset or CSV file"
+            "benchmarks that test whether AI can verify a specific claim or statistic against an authoritative source such as a government database"
+            "benchmarks that test whether AI accurately conveys uncertainty, confidence, or limitations in a way a non-expert can act on"
+            "benchmarks that test end-to-end data analysis: loading data, reasoning over it, and producing an accurate narrative or summary"
           )
           for topic in "${topics[@]}"; do
             echo "Researching: $topic"
