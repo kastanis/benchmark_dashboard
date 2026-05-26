@@ -1,0 +1,49 @@
+name: Refresh benchmark scores
+
+on:
+  schedule:
+    - cron: "0 14 * * 1"  # Every Monday at 9am ET (14:00 UTC)
+  workflow_dispatch:       # Allow manual trigger from GitHub Actions tab
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh and apply score updates
+        run: |
+          cd $GITHUB_WORKSPACE
+          python3 scripts/research_agent.py refresh-scores
+          latest=$(ls -t research_inbox/score_updates_*.json 2>/dev/null | head -1)
+          if [ -z "$latest" ]; then
+            echo "No update file generated — nothing to apply."
+            exit 0
+          fi
+          changes=$(python3 -c "import json; d=json.load(open('$latest')); print(len(d.get('changes', [])))")
+          echo "Changes found: $changes"
+          if [ "$changes" -eq "0" ]; then
+            echo "No score changes — skipping commit."
+            exit 0
+          fi
+          python3 scripts/research_agent.py apply-score-updates "$latest"
+
+      - name: Commit updated scores
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/model_scores.json
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "chore: refresh benchmark scores $(date -u +%Y-%m-%d)"
+            git push
+          fi
