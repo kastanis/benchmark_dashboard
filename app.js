@@ -490,5 +490,9 @@ for (const control of [els.scoreBenchmarkFilter, els.scoreProviderFilter]) {
 }
 
 loadData().catch((error) => {
-  els.benchmarks.textContent = error.message;
+  const isFile = window.location.protocol === "file:";
+  const message = isFile
+    ? "This dashboard needs to be opened from a local web server so the browser can load the JSON files in ./data. Use http://127.0.0.1:8879/ instead of opening index.html directly."
+    : `Could not load dashboard data: ${error.message}`;
+  els.benchmarks.innerHTML = `<div class="load-error">${message}</div>`;
 });
