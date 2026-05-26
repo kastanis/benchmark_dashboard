@@ -1,0 +1,51 @@
+name: Discover new benchmarks
+
+on:
+  schedule:
+    - cron: "0 15 1 * *"  # First of every month at 11am ET (15:00 UTC)
+  workflow_dispatch:       # Allow manual trigger from GitHub Actions tab
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Research new benchmarks
+        run: |
+          cd $GITHUB_WORKSPACE
+          topics=(
+            "new NLP or text analysis benchmarks 2026"
+            "document extraction or IDP benchmarks 2026"
+            "fact checking or hallucination detection benchmarks 2026"
+            "agentic or tool-use benchmarks for data tasks 2026"
+          )
+          for topic in "${topics[@]}"; do
+            echo "Researching: $topic"
+            python3 scripts/research_agent.py research "$topic" || echo "Failed: $topic"
+            sleep 5
+          done
+
+      - name: Commit draft entries to research_inbox
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add research_inbox/
+          if git diff --cached --quiet; then
+            echo "No new drafts generated."
+          else
+            count=$(git diff --cached --name-only | grep -c "research_inbox/" || true)
+            git commit -m "chore: add $count benchmark draft(s) for review $(date -u +%Y-%m-%d)"
+            git push
+          fi

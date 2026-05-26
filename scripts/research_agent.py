@@ -20,6 +20,15 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# Load .env if present (no dependency required)
+_env_file = ROOT / ".env"
+if _env_file.exists():
+    for _line in _env_file.read_text().splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _, _v = _line.partition("=")
+            os.environ.setdefault(_k.strip(), _v.strip())
 DATA_FILE = ROOT / "data" / "benchmarks.json"
 SCORES_FILE = ROOT / "data" / "model_scores.json"
 SCORE_SOURCES_FILE = ROOT / "data" / "score_sources.json"
@@ -494,13 +503,12 @@ def add_entry(path: Path) -> None:
     print(f"{action} {entry['name']} in {DATA_FILE}")
 
 
-def call_openai_research(topic: str, model: str) -> Path:
-    api_key = os.environ.get("OPENAI_API_KEY")
+def call_claude_research(topic: str, model: str) -> Path:
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
-        raise SystemExit("OPENAI_API_KEY is required for AI research mode.")
+        raise SystemExit("ANTHROPIC_API_KEY is required for AI research mode.")
 
-    prompt = f"""
-Research this AI benchmark or capability for a personal data journalism benchmark dashboard: {topic}
+    prompt = f"""Research this AI benchmark or capability for a personal data journalism benchmark dashboard: {topic}
 
 Return only one JSON object matching this shape:
 {json.dumps(SCHEMA_HINT, indent=2)}
@@ -510,19 +518,19 @@ Rules:
 - Focus on relevance to data journalism tasks: source discovery, fact checks, tables, charts, documents, coding, analysis.
 - Include two signals: one practical strength and one caveat.
 - Do not invent performance numbers unless a source explicitly supports them.
-"""
+- Reply ONLY with the JSON object, no markdown fences or extra text."""
 
     body = {
         "model": model,
-        "tools": [{"type": "web_search"}],
-        "input": prompt,
-        "text": {"format": {"type": "json_object"}},
+        "max_tokens": 1024,
+        "messages": [{"role": "user", "content": prompt}],
     }
     request = urllib.request.Request(
-        "https://api.openai.com/v1/responses",
+        "https://api.anthropic.com/v1/messages",
         data=json.dumps(body).encode("utf-8"),
         headers={
-            "Authorization": f"Bearer {api_key}",
+            "x-api-key": api_key,
+            "anthropic-version": "2023-06-01",
             "Content-Type": "application/json",
         },
         method="POST",
@@ -531,14 +539,15 @@ Rules:
     with urllib.request.urlopen(request, timeout=120) as response:
         payload = json.loads(response.read().decode("utf-8"))
 
-    text = payload.get("output_text")
-    if not text:
-        chunks = []
-        for item in payload.get("output", []):
-            for content in item.get("content", []):
-                if "text" in content:
-                    chunks.append(content["text"])
-        text = "\n".join(chunks)
+    text = payload.get("content", [{}])[0].get("text", "")
+
+    # Strip markdown fences if present
+    text = text.strip()
+    if text.startswith("```"):
+        text = text.split("```")[1]
+        if text.startswith("json"):
+            text = text[4:]
+    text = text.strip()
 
     entry = json.loads(text)
     if "id" not in entry and "name" in entry:
@@ -562,9 +571,9 @@ def main() -> None:
     add_parser = sub.add_parser("add", help="Validate and add a benchmark JSON file to the dashboard.")
     add_parser.add_argument("path", type=Path)
 
-    research_parser = sub.add_parser("research", help="Use OpenAI Responses API with web search to draft an entry.")
+    research_parser = sub.add_parser("research", help="Use Claude API to draft a benchmark entry.")
     research_parser.add_argument("topic")
-    research_parser.add_argument("--model", default="gpt-5")
+    research_parser.add_argument("--model", default="claude-opus-4-7")
 
     refresh_parser = sub.add_parser("refresh-scores", help="Crawl known score sources and draft proposed updates.")
     refresh_parser.add_argument("--source", help="Only refresh one source id from data/score_sources.json.")
@@ -581,7 +590,7 @@ def main() -> None:
     elif args.command == "add":
         add_entry(args.path)
     elif args.command == "research":
-        out = call_openai_research(args.topic, args.model)
+        out = call_claude_research(args.topic, args.model)
         print(f"Wrote draft to {out}")
         print(f"Review it, then run: python3 scripts/research_agent.py add {out}")
     elif args.command == "refresh-scores":
