@@ -1,25 +1,25 @@
 {
   "id": "discoverybench",
   "name": "DiscoveryBench",
-  "category": "Analysis code",
+  "category": "Tables",
   "status": "Active",
   "year": 2024,
   "journalism_relevance": 5,
   "difficulty": "Hard",
   "capabilities": [
-    "data-driven discovery",
-    "hypothesis generation",
-    "multi-step analysis",
-    "tabular reasoning"
+    "hypothesis discovery",
+    "data analysis",
+    "multi-step reasoning",
+    "CSV exploration"
   ],
-  "why_it_matters": "Tests whether models can autonomously surface meaningful findings from real datasets, which mirrors the core data journalism task of finding the story in the numbers.",
-  "task_shape": "Given a dataset and a high-level research goal, the model must perform multi-step analysis to produce a verifiable hypothesis or finding that matches a ground-truth discovery.",
+  "why_it_matters": "Data journalists routinely need to surface the underlying story or finding hidden in messy spreadsheets, which is exactly what this benchmark measures.",
+  "task_shape": "Given a natural-language research goal and one or more real-world datasets (CSVs), the model must autonomously perform analysis and produce a verifiable hypothesis or finding that matches a ground-truth discovery.",
   "signals": [
-    "Uses 264 real-world tasks across domains like sociology, economics, and biology drawn from published research, so findings reflect genuine analytical workflows.",
-    "Frontier models score well below human performance, and the benchmark assumes a clear research goal is provided rather than fully open-ended exploration."
+    "Uses 264 real data-driven discovery tasks across domains like sociology, economics, and biology, grounded in published findings.",
+    "Tasks are framed around known published hypotheses, so success may reward rediscovery rather than genuinely novel angle-finding a reporter would value."
   ],
   "source": {
-    "label": "DiscoveryBench paper (arXiv)",
-    "url": "https://arxiv.org/abs/2407.01725"
+    "label": "DiscoveryBench (Allen AI / GitHub)",
+    "url": "https://github.com/allenai/discoverybench"
   }
 }

@@ -7,15 +7,15 @@
   "journalism_relevance": 5,
   "difficulty": "Hard",
   "capabilities": [
-    "claim decomposition",
+    "claim verification",
     "evidence retrieval",
-    "source verification"
+    "source grounding"
   ],
-  "why_it_matters": "Newsrooms increasingly need automated assistance to verify statistics and quoted claims against authoritative sources before publication.",
-  "task_shape": "Given a claim from an LLM response, models must decompose it into atomic checkworthy units, retrieve supporting evidence from the web, and label each as supported, contradicted, or unverifiable.",
+  "why_it_matters": "Newsrooms need to verify statistics and claims against authoritative sources, and this benchmark probes whether LLMs can decompose, retrieve, and adjudicate factual claims end-to-end.",
+  "task_shape": "Given a claim, models must decompose it into checkworthy sub-claims, retrieve supporting evidence, and label each as supported, refuted, or unverifiable with citations.",
   "signals": [
-    "Provides a fine-grained pipeline with human-annotated labels across decomposition, retrieval, and verification stages.",
-    "Evidence is drawn from open web search rather than curated authoritative databases, so it does not isolate government-source verification specifically."
+    "Provides a fine-grained, multi-step evaluation pipeline that mirrors how reporters actually fact-check statistics.",
+    "Coverage skews to general web claims rather than specialized government database lookups, so domain-specific statistical verification may be underrepresented."
   ],
   "source": {
     "label": "FactCheck-Bench GitHub (Wang et al., 2024)",

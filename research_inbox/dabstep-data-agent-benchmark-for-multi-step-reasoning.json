@@ -1,0 +1,25 @@
+{
+  "id": "dabstep",
+  "name": "DABstep (Data Agent Benchmark for Multi-step Reasoning)",
+  "category": "Analysis code",
+  "status": "Active",
+  "year": 2025,
+  "journalism_relevance": 5,
+  "difficulty": "Hard",
+  "capabilities": [
+    "data loading",
+    "multi-step reasoning",
+    "code execution",
+    "narrative answers"
+  ],
+  "why_it_matters": "Mirrors the core newsroom workflow of ingesting messy data, running analysis, and producing a defensible written answer.",
+  "task_shape": "Agents receive real-world data files plus domain documentation and must explore, code, and reason across multiple steps to produce a precise factoid or narrative answer to an analyst-style question.",
+  "signals": [
+    "Built from real business data tasks requiring both code and contextual document reading, closely echoing data journalism work.",
+    "Answers are graded by exact-match style checks, which can penalize correct but differently phrased narrative outputs."
+  ],
+  "source": {
+    "label": "Hugging Face — DABstep benchmark",
+    "url": "https://huggingface.co/blog/dabstep"
+  }
+}
