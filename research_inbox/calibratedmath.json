@@ -11,14 +11,14 @@
     "verbalized confidence",
     "calibration"
   ],
-  "why_it_matters": "Newsrooms need AI that signals when it is unsure so reporters and readers do not act on overconfident answers.",
-  "task_shape": "Models answer arithmetic questions across varying difficulty and must express calibrated confidence in their answers using words or numbers, evaluated against actual accuracy.",
+  "why_it_matters": "Reporters need models that flag their own uncertainty in plain language so non-expert readers and editors can judge when to trust or verify a claim.",
+  "task_shape": "Models answer arithmetic questions and must express their confidence in the answer either as a numerical probability or in natural-language hedges (e.g., 'almost certain', 'low confidence'), which are then scored against actual accuracy.",
   "signals": [
-    "Directly measures whether stated confidence matches real correctness, a property non-experts can act on.",
-    "Limited to math problems, so calibration findings may not transfer to messy real-world reporting tasks."
+    "Directly measures whether verbalized confidence tracks true accuracy, a property crucial for editorial trust.",
+    "Limited to arithmetic reasoning, so results may not transfer to open-ended factual or investigative tasks."
   ],
   "source": {
-    "label": "Lin, Hilton, Evans (2022) — Teaching Models to Express Their Uncertainty in Words",
+    "label": "Lin, Hilton & Evans, 'Teaching Models to Express Their Uncertainty in Words' (arXiv)",
     "url": "https://arxiv.org/abs/2205.14334"
   }
 }

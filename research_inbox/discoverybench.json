@@ -1,25 +1,25 @@
 {
   "id": "discoverybench",
   "name": "DiscoveryBench",
-  "category": "Tables",
+  "category": "Analysis code",
   "status": "Active",
   "year": 2024,
   "journalism_relevance": 5,
   "difficulty": "Hard",
   "capabilities": [
-    "hypothesis discovery",
-    "data analysis",
-    "multi-step reasoning",
-    "CSV exploration"
+    "data-driven discovery",
+    "hypothesis generation",
+    "multi-step analysis",
+    "CSV reasoning"
   ],
-  "why_it_matters": "Data journalists routinely need to surface the underlying story or finding hidden in messy spreadsheets, which is exactly what this benchmark measures.",
-  "task_shape": "Given a natural-language research goal and one or more real-world datasets (CSVs), the model must autonomously perform analysis and produce a verifiable hypothesis or finding that matches a ground-truth discovery.",
+  "why_it_matters": "Data journalists routinely need to surface the story hidden in messy CSVs, and this benchmark measures exactly that end-to-end discovery workflow.",
+  "task_shape": "Given a real-world tabular dataset and a discovery goal, the model must run multi-step analysis to produce a hypothesis or finding, evaluated against ground-truth discoveries from published research.",
   "signals": [
-    "Uses 264 real data-driven discovery tasks across domains like sociology, economics, and biology, grounded in published findings.",
-    "Tasks are framed around known published hypotheses, so success may reward rediscovery rather than genuinely novel angle-finding a reporter would value."
+    "Uses 264 real discovery tasks derived from published papers across domains like sociology, economics, and biology, giving realistic messiness.",
+    "Ground-truth findings are singular and pre-specified, so genuine alternative stories a journalist might legitimately surface are marked wrong."
   ],
   "source": {
-    "label": "DiscoveryBench (Allen AI / GitHub)",
+    "label": "DiscoveryBench (AI2, arXiv 2407.01725)",
     "url": "https://github.com/allenai/discoverybench"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "databench",
+  "name": "DataBench",
+  "category": "Analysis code",
+  "status": "Active",
+  "year": 2024,
+  "journalism_relevance": 5,
+  "difficulty": "Hard",
+  "capabilities": [
+    "tabular QA",
+    "data loading",
+    "reasoning",
+    "narrative summary"
+  ],
+  "why_it_matters": "Data journalists routinely load CSVs, reason over them, and write accurate summaries—exactly the end-to-end workflow this benchmark evaluates.",
+  "task_shape": "Models are given real-world tabular datasets and natural-language questions, and must load the data, reason over rows/columns, and return factual answers grounded in the table.",
+  "signals": [
+    "Uses 65 real-world datasets across diverse domains with typed answer categories that make grading unambiguous.",
+    "Focuses on question answering rather than full narrative generation, so long-form summary quality is only partially tested."
+  ],
+  "source": {
+    "label": "DataBench (LREC-COLING 2024)",
+    "url": "https://aclanthology.org/2024.lrec-main.1179/"
+  }
+}

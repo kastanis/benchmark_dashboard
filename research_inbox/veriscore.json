@@ -1,0 +1,24 @@
+{
+  "id": "veriscore",
+  "name": "VeriScore",
+  "category": "Factuality",
+  "status": "Active",
+  "year": 2024,
+  "journalism_relevance": 4,
+  "difficulty": "Hard",
+  "capabilities": [
+    "claim extraction",
+    "evidence retrieval",
+    "fact verification"
+  ],
+  "why_it_matters": "Newsrooms need to know whether AI outputs can be traced back to verifiable, authoritative evidence rather than plausible-sounding fabrications.",
+  "task_shape": "Given long-form model outputs, extract verifiable claims and check each against retrieved web evidence, scoring both precision (share of claims supported) and recall of verifiable facts.",
+  "signals": [
+    "Focuses on verifiable claims only, avoiding penalizing subjective or unverifiable statements and producing a reproducible pipeline.",
+    "Relies on general web search for evidence rather than curated authoritative databases, so verdicts can inherit source-quality problems."
+  ],
+  "source": {
+    "label": "VeriScore (Song et al., EMNLP 2024) GitHub",
+    "url": "https://github.com/Yixiao-Song/VeriScore"
+  }
+}
