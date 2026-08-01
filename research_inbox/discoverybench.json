@@ -5,21 +5,21 @@
   "status": "Active",
   "year": 2024,
   "journalism_relevance": 5,
-  "difficulty": "Hard",
+  "difficulty": "Very hard",
   "capabilities": [
-    "data-driven discovery",
-    "hypothesis generation",
-    "multi-step analysis",
-    "CSV reasoning"
+    "hypothesis discovery",
+    "data analysis",
+    "multi-step reasoning",
+    "CSV exploration"
   ],
-  "why_it_matters": "Data journalists routinely need to surface the story hidden in messy CSVs, and this benchmark measures exactly that end-to-end discovery workflow.",
-  "task_shape": "Given a real-world tabular dataset and a discovery goal, the model must run multi-step analysis to produce a hypothesis or finding, evaluated against ground-truth discoveries from published research.",
+  "why_it_matters": "Reporters routinely dig through messy datasets looking for the story, and this benchmark directly tests whether models can surface a defensible finding from raw tabular data.",
+  "task_shape": "Given a dataset (often multiple CSVs) and a high-level research goal, the model must plan and execute analysis steps to produce a natural-language hypothesis or finding that matches a gold discovery.",
   "signals": [
-    "Uses 264 real discovery tasks derived from published papers across domains like sociology, economics, and biology, giving realistic messiness.",
-    "Ground-truth findings are singular and pre-specified, so genuine alternative stories a journalist might legitimately surface are marked wrong."
+    "Covers 264 real tasks across domains like sociology, economics, and biology, mirroring the variety of data journalism beats.",
+    "Frontier models score in the low 20s percent on facet-level accuracy, so results still need heavy human verification."
   ],
   "source": {
     "label": "DiscoveryBench (AI2, arXiv 2407.01725)",
-    "url": "https://github.com/allenai/discoverybench"
+    "url": "https://arxiv.org/abs/2407.01725"
   }
 }

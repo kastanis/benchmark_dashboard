@@ -1,0 +1,24 @@
+{
+  "id": "calibrated-math",
+  "name": "Calibrated Math (Lin et al.)",
+  "category": "Factuality",
+  "status": "Watchlist",
+  "year": 2022,
+  "journalism_relevance": 0.8,
+  "difficulty": "Hard",
+  "capabilities": [
+    "verbalized uncertainty",
+    "calibration",
+    "hedging"
+  ],
+  "why_it_matters": "Reporters and readers need to know when a model is guessing; calibration benchmarks test whether stated confidence tracks actual accuracy.",
+  "task_shape": "Models answer arithmetic/word problems and must express confidence in words or numbers; scores compare stated confidence against correctness using calibration metrics like expected calibration error and Brier score.",
+  "signals": [
+    "Directly measures whether verbalized confidence is trustworthy, which maps to newsroom needs for hedged answers.",
+    "Narrow math domain limits generalization to open-ended journalism queries about sources, quotes, or documents."
+  ],
+  "source": {
+    "label": "Teaching Models to Express Their Uncertainty in Words (arXiv:2205.14334)",
+    "url": "https://arxiv.org/abs/2205.14334"
+  }
+}
