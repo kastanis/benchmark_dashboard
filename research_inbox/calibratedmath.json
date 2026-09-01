@@ -2,23 +2,23 @@
   "id": "calibratedmath",
   "name": "CalibratedMath",
   "category": "Factuality",
-  "status": "Established",
+  "status": "Watchlist",
   "year": 2022,
   "journalism_relevance": 0.8,
   "difficulty": "Hard",
   "capabilities": [
-    "uncertainty expression",
-    "verbalized confidence",
-    "calibration"
+    "verbalized uncertainty",
+    "calibration",
+    "confidence expression"
   ],
-  "why_it_matters": "Reporters need models that flag their own uncertainty in plain language so non-expert readers and editors can judge when to trust or verify a claim.",
-  "task_shape": "Models answer arithmetic questions and must express their confidence in the answer either as a numerical probability or in natural-language hedges (e.g., 'almost certain', 'low confidence'), which are then scored against actual accuracy.",
+  "why_it_matters": "Reporters relying on AI need models that flag when they are unsure in plain language, not just when probabilities are logged internally.",
+  "task_shape": "Models answer arithmetic questions and must express their confidence in words or numbers; scores measure how well stated confidence matches actual accuracy.",
   "signals": [
-    "Directly measures whether verbalized confidence tracks true accuracy, a property crucial for editorial trust.",
-    "Limited to arithmetic reasoning, so results may not transfer to open-ended factual or investigative tasks."
+    "Directly tests whether verbalized confidence tracks correctness, which is what non-expert users actually see.",
+    "Narrow arithmetic domain may not generalize to messy real-world reporting questions."
   ],
   "source": {
-    "label": "Lin, Hilton & Evans, 'Teaching Models to Express Their Uncertainty in Words' (arXiv)",
+    "label": "Lin, Hilton, Evans — Teaching Models to Express Their Uncertainty in Words",
     "url": "https://arxiv.org/abs/2205.14334"
   }
 }

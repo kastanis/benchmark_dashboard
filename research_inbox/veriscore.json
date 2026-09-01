@@ -11,14 +11,14 @@
     "evidence retrieval",
     "fact verification"
   ],
-  "why_it_matters": "Newsrooms need to verify individual statistics and claims against authoritative sources, and VeriScore measures exactly that pipeline of extracting check-worthy claims and grounding them in retrieved evidence.",
-  "task_shape": "Given long-form model output, extract verifiable claims, retrieve supporting web evidence, and score each claim as supported or unsupported, producing a factual precision and recall metric.",
+  "why_it_matters": "Newsrooms need reliable ways to check whether AI-generated claims and statistics can be substantiated against authoritative online sources.",
+  "task_shape": "Extracts verifiable claims from long-form model outputs, retrieves web evidence via search, and scores each claim as supported or unsupported to produce a factual precision and recall metric.",
   "signals": [
-    "Focuses only on check-worthy, verifiable claims rather than penalizing subjective or non-factual sentences, which better matches editorial fact-checking workflows.",
-    "Verification depends on general web search rather than curated authoritative databases, so results can reflect source quality issues rather than pure model accuracy."
+    "Focuses on verifiable claims in long-form generation rather than short QA, closer to real reporting workflows.",
+    "Relies on web search snippets as ground truth, so quality depends on retrieval and may miss claims requiring paywalled or database sources."
   ],
   "source": {
-    "label": "VeriScore GitHub (Song et al., 2024)",
+    "label": "VeriScore GitHub (Song et al., EMNLP 2024)",
     "url": "https://github.com/Yixiao-Song/VeriScore"
   }
 }

@@ -8,18 +8,18 @@
   "difficulty": "Hard",
   "capabilities": [
     "data loading",
-    "exploratory analysis",
+    "analytical reasoning",
     "modeling",
-    "narrative reporting"
+    "narrative summary"
   ],
-  "why_it_matters": "Data journalists routinely need agents that can ingest messy datasets, run analyses, and summarize findings accurately — exactly what DSBench evaluates end-to-end.",
-  "task_shape": "Agents are given realistic data science tasks from Kaggle and ModelOff (spreadsheets, CSVs, task descriptions) and must load data, reason, run code, and produce answers or narrative summaries judged against ground truth.",
+  "why_it_matters": "Mirrors the newsroom workflow of ingesting messy data, analyzing it, and producing an accurate written summary.",
+  "task_shape": "Agents are given realistic data science tasks (data analysis and modeling) sourced from ModelOff and Kaggle, requiring them to work with long contexts, multiple files, and produce answers or predictions.",
   "signals": [
-    "Tasks are sourced from real Kaggle competitions and analytics challenges, giving a realistic proxy for newsroom data work.",
-    "Current frontier agents solve only a minority of tasks, so scores can be noisy indicators for lightweight journalism use cases."
+    "Uses realistic, multi-file tasks with tables, documents, and images rather than toy problems.",
+    "State-of-the-art agents solve only a minority of tasks, so scores may be noisy for close comparisons."
   ],
   "source": {
-    "label": "DSBench GitHub (LiqiangJing/DSBench)",
-    "url": "https://github.com/LiqiangJing/DSBench"
+    "label": "DSBench paper (arXiv)",
+    "url": "https://arxiv.org/abs/2409.07703"
   }
 }

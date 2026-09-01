@@ -5,21 +5,21 @@
   "status": "Active",
   "year": 2024,
   "journalism_relevance": 5,
-  "difficulty": "Very hard",
+  "difficulty": "Hard",
   "capabilities": [
-    "hypothesis discovery",
-    "data analysis",
-    "multi-step reasoning",
-    "CSV exploration"
+    "data-driven discovery",
+    "hypothesis generation",
+    "multi-step analysis",
+    "CSV reasoning"
   ],
-  "why_it_matters": "Reporters routinely dig through messy datasets looking for the story, and this benchmark directly tests whether models can surface a defensible finding from raw tabular data.",
-  "task_shape": "Given a dataset (often multiple CSVs) and a high-level research goal, the model must plan and execute analysis steps to produce a natural-language hypothesis or finding that matches a gold discovery.",
+  "why_it_matters": "Data journalists routinely need to surface the story hidden in a messy dataset, and this benchmark directly measures whether an AI can autonomously find a defensible finding from raw tabular data.",
+  "task_shape": "Given a dataset (often multiple CSVs) and a high-level research goal, the model must plan and execute a multi-step analysis to produce a specific hypothesis or finding, evaluated against ground-truth discoveries drawn from published research.",
   "signals": [
-    "Covers 264 real tasks across domains like sociology, economics, and biology, mirroring the variety of data journalism beats.",
-    "Frontier models score in the low 20s percent on facet-level accuracy, so results still need heavy human verification."
+    "Grounded in real published findings across domains like sociology, economics, and biology, so tasks resemble real analytical reporting workflows.",
+    "Requires a fixed research goal to be provided, so it doesn't fully test open-ended 'what's the story here?' exploration a journalist would do from scratch."
   ],
   "source": {
-    "label": "DiscoveryBench (AI2, arXiv 2407.01725)",
-    "url": "https://arxiv.org/abs/2407.01725"
+    "label": "DiscoveryBench (AI2 / GitHub)",
+    "url": "https://github.com/allenai/discoverybench"
   }
 }
