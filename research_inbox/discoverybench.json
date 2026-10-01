@@ -7,19 +7,19 @@
   "journalism_relevance": 5,
   "difficulty": "Hard",
   "capabilities": [
-    "data-driven discovery",
-    "hypothesis generation",
-    "multi-step analysis",
-    "CSV reasoning"
+    "hypothesis discovery",
+    "data analysis",
+    "multi-step reasoning",
+    "CSV exploration"
   ],
-  "why_it_matters": "Data journalists routinely need to surface the story hidden in a messy dataset, and this benchmark directly measures whether an AI can autonomously find a defensible finding from raw tabular data.",
-  "task_shape": "Given a dataset (often multiple CSVs) and a high-level research goal, the model must plan and execute a multi-step analysis to produce a specific hypothesis or finding, evaluated against ground-truth discoveries drawn from published research.",
+  "why_it_matters": "Mirrors the core data journalism workflow of surfacing a defensible finding from a messy real-world dataset.",
+  "task_shape": "Given a natural language research goal and one or more CSV datasets, the model must autonomously explore the data and produce a structured hypothesis that matches a gold discovery.",
   "signals": [
-    "Grounded in real published findings across domains like sociology, economics, and biology, so tasks resemble real analytical reporting workflows.",
-    "Requires a fixed research goal to be provided, so it doesn't fully test open-ended 'what's the story here?' exploration a journalist would do from scratch."
+    "Covers 264 real tasks across sociology, biology, economics and other domains with gold-standard hypotheses for evaluation.",
+    "Top agents score only around 25% on hypothesis discovery, and the fixed hypothesis format may not capture the narrative judgement a reporter would apply."
   ],
   "source": {
-    "label": "DiscoveryBench (AI2 / GitHub)",
+    "label": "DiscoveryBench (AI2, GitHub)",
     "url": "https://github.com/allenai/discoverybench"
   }
 }

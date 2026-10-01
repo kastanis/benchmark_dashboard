@@ -2,23 +2,23 @@
   "id": "calibratedmath",
   "name": "CalibratedMath",
   "category": "Factuality",
-  "status": "Watchlist",
+  "status": "Established",
   "year": 2022,
   "journalism_relevance": 0.8,
   "difficulty": "Hard",
   "capabilities": [
-    "verbalized uncertainty",
+    "uncertainty expression",
     "calibration",
-    "confidence expression"
+    "verbalized confidence"
   ],
-  "why_it_matters": "Reporters relying on AI need models that flag when they are unsure in plain language, not just when probabilities are logged internally.",
-  "task_shape": "Models answer arithmetic questions and must express their confidence in words or numbers; scores measure how well stated confidence matches actual accuracy.",
+  "why_it_matters": "Reporters need AI tools that flag when they are unsure so non-expert users do not treat confident-sounding answers as verified facts.",
+  "task_shape": "Models answer arithmetic questions across varied difficulty levels and must express calibrated confidence in their answers, either as numeric probabilities or in natural language words, which are then scored against actual accuracy.",
   "signals": [
-    "Directly tests whether verbalized confidence tracks correctness, which is what non-expert users actually see.",
-    "Narrow arithmetic domain may not generalize to messy real-world reporting questions."
+    "Directly measures whether a model's stated confidence matches its real accuracy, a key safety property for newsroom use.",
+    "Limited to math problems, so results may not generalize to confidence calibration in open-ended research or fact-checking."
   ],
   "source": {
-    "label": "Lin, Hilton, Evans — Teaching Models to Express Their Uncertainty in Words",
+    "label": "Lin, Hilton, Evans — Teaching Models to Express Their Uncertainty in Words (arXiv)",
     "url": "https://arxiv.org/abs/2205.14334"
   }
 }

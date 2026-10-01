@@ -9,14 +9,14 @@
   "capabilities": [
     "data loading",
     "analytical reasoning",
-    "modeling",
-    "narrative summary"
+    "narrative summary",
+    "modeling"
   ],
-  "why_it_matters": "Mirrors the newsroom workflow of ingesting messy data, analyzing it, and producing an accurate written summary.",
-  "task_shape": "Agents are given realistic data science tasks (data analysis and modeling) sourced from ModelOff and Kaggle, requiring them to work with long contexts, multiple files, and produce answers or predictions.",
+  "why_it_matters": "Mirrors a reporter's full workflow of ingesting messy datasets, running analysis, and writing an accurate takeaway.",
+  "task_shape": "Agents tackle realistic data science tasks sourced from Kaggle and ModelOff, including data analysis questions and modeling challenges that require loading provided files, reasoning across them, and producing answers or reports.",
   "signals": [
-    "Uses realistic, multi-file tasks with tables, documents, and images rather than toy problems.",
-    "State-of-the-art agents solve only a minority of tasks, so scores may be noisy for close comparisons."
+    "Tasks are grounded in real competitions with long context and multi-file inputs, closer to newsroom analysis than toy QA.",
+    "Reported frontier model accuracy is low, so it is better as a stress test than a routine benchmark."
   ],
   "source": {
     "label": "DSBench paper (arXiv)",
